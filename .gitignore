@@ -1,27 +1,20 @@
 # Virtual Environment
 .venv/
 
-# Environment Variables
-.env
-
-# Python Cache
+# Python
 __pycache__/
 *.pyc
 
-# Jupyter
-.ipynb_checkpoints/
+# Environment
+.env
 
-# VS Code
+# Storage
+storage/faiss/
+storage/uploads/
+
+# IDE
 .vscode/
-
-# Streamlit
-.streamlit/secrets.toml
-
-# Data
-data/
-
-# Vector Store
-faiss_index/
+.idea/
 
 # OS
 .DS_Store
