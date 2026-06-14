@@ -1,21 +1,40 @@
 # Virtual Environment
+
 .venv/
 
 # Python
-__pycache__/
+
+**pycache**/
 *.pyc
 
 # Environment
+
 .env
 
 # Storage
-storage/faiss/
-storage/uploads/
+
+storage/
+storage - Copy/
+
+# Test Documents
+
+*.pdf
+
+# FAISS
+
+*.faiss
+*.pkl
+
+# Testing
+
+.pytest_cache/
 
 # IDE
+
 .vscode/
 .idea/
 
 # OS
+
 .DS_Store
 Thumbs.db

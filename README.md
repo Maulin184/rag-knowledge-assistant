@@ -16,3 +16,10 @@ A production-grade Retrieval Augmented Generation (RAG) application built with:
 - Vector Retrieval
 - Context-Aware Answers
 - Source Citations
+
+
+How to run test files:
+- Eg. "python -m tests.test_document_loader"
+
+How to run main.py file:
+- uvicorn backend.main:app --reload
