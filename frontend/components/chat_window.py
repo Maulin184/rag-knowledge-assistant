@@ -15,12 +15,58 @@ def render_chat_window(
     ):
 
         st.title(
-            "📄 Document Chat"
+            "📚 RAG Knowledge Assistant"
         )
 
-        st.info(
-            "Select a document to begin."
+        st.markdown(
+            """
+            Upload a PDF and chat with your documents using
+            Retrieval-Augmented Generation (RAG).
+
+            ### What can you do?
+
+            - 📄 Summarize documents
+            - 🧠 Explain concepts
+            - 📝 Generate study notes
+            - 🔍 Extract key insights
+            - 💬 Ask follow-up questions
+
+            ### Getting Started
+
+            1. Upload a PDF from the sidebar
+            2. Select the document
+            3. Create a conversation
+            4. Start chatting
+            """
         )
+
+        st.divider()
+
+        st.subheader(
+            "💡 Example Questions"
+        )
+
+        col1, col2 = st.columns(2)
+
+        with col1:
+
+            st.info(
+                "Summarize this document"
+            )
+
+            st.info(
+                "What are the key concepts?"
+            )
+
+        with col2:
+
+            st.info(
+                "Create study notes"
+            )
+
+            st.info(
+                "Explain this like I'm 10"
+            )
 
         return
 
@@ -29,11 +75,21 @@ def render_chat_window(
     # -------------------------
 
     st.title(
-        st.session_state.selected_document_name
+        f"📄 {st.session_state.selected_document_name}"
     )
 
     st.caption(
-        "Chat with your document"
+        "Ask questions and get source-grounded answers"
+    )
+
+    st.info(
+        f"""
+    Selected Document:
+    {st.session_state.selected_document_name}
+
+    Status:
+    Ready for chat
+    """
     )
 
     st.divider()
@@ -42,21 +98,6 @@ def render_chat_window(
     # Display Existing Messages
     # -------------------------
 
-    # for message in (
-    #     st.session_state.messages
-    # ):
-
-    #     with st.chat_message(
-    #         message["role"]
-    #     ):
-
-    #         st.markdown(
-    #             message["content"]
-    #         )
-
-    st.json(
-        st.session_state.messages
-    )
     for message in (
         st.session_state.messages
     ):
@@ -207,13 +248,6 @@ def render_chat_window(
     # -------------------------
     # Save Assistant Message
     # -------------------------
-
-    # st.session_state.messages.append(
-    #     {
-    #         "role": "assistant",
-    #         "content": answer
-    #     }
-    # )
 
     st.session_state.messages.append(
         {

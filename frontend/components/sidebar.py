@@ -183,8 +183,11 @@ def render_sidebar(api_client):
                     st.session_state.conversation_id
                 )
 
+                # label = (
+                #     f"💬 {conversation_id['title']}"
+                # )
                 label = (
-                    f"💬 {conversation_id[-8:]}"
+                    f"💬 {conversation.get('title', 'New Conversation')}"
                 )
 
                 if selected:

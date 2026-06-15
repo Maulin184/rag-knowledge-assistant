@@ -72,6 +72,7 @@ class ConversationManager:
             "document_id": (
                 document_id
             ),
+            "title": "New Conversation",
             "created_at": (
                 datetime.utcnow()
                 .isoformat()
@@ -123,9 +124,39 @@ class ConversationManager:
                 f"not found"
             )
 
-        registry[
+        # registry[
+        #     conversation_id
+        # ][
+        #     "messages"
+        # ].append(
+        #     {
+        #         "role": role,
+        #         "content": content
+        #     }
+        # )
+        conversation = registry[
             conversation_id
-        ][
+        ]
+
+        if (
+            role == "user"
+            and conversation["title"]
+            == "New Conversation"
+        ):
+
+            title = content.strip()
+
+            if len(title) > 40:
+
+                title = (
+                    title[:40] + "..."
+                )
+
+            conversation["title"] = (
+                title
+            )
+
+        conversation[
             "messages"
         ].append(
             {

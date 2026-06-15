@@ -70,6 +70,10 @@ def get_document_conversations(
                 document_id=conversation[
                     "document_id"
                 ],
+                title=conversation.get(
+                    "title",
+                    "New Conversation"
+                ),
                 created_at=conversation[
                     "created_at"
                 ]
