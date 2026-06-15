@@ -59,6 +59,7 @@ def chat(
             SourceResponse(
                 chunk_id=str(source.chunk_id),
                 page=source.page,
+                snippet=source.text[:300],
                 distance=source.distance
             )
         )

@@ -14,6 +14,7 @@ class SourceResponse(
 ):
     chunk_id: str
     page: int
+    snippet:str
     distance: float
 
 

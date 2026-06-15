@@ -128,16 +128,31 @@ def render_chat_window(
                         "📚 Sources"
                     ):
 
-                        for source in sources:
+                        # for source in sources:
 
+                        #     st.markdown(
+                        #         f"""
+                        #         **Page:** {source['page']}
+
+                        #         **Chunk ID:** {source['chunk_id']}
+
+                        #         **Distance:** {source['distance']:.4f}
+                        #         """
+                        #     )
+
+                        #     st.divider()
+
+                        for i, source in enumerate(sources):
+                            snippet = source['snippet'][:250]
                             st.markdown(
                                 f"""
-                                **Page:** {source['page']}
+                        ### 📄 Source {i + 1}
 
-                                **Chunk ID:** {source['chunk_id']}
+                        ** Page: ** {source['page']}
 
-                                **Distance:** {source['distance']:.4f}
-                                """
+                        > {snippet}...
+
+                        """
                             )
 
                             st.divider()
@@ -231,16 +246,17 @@ def render_chat_window(
                 "📚 Sources"
             ):
 
-                for source in sources:
-
+                for i, source in enumerate(sources):
+                    
+                    snippet = source["snippet"][:250]
                     st.markdown(
-                        f"""
-    **Page:** {source['page']}
+                         f"""
+                        ### 📄 Source {i + 1}
 
-    **Chunk ID:** {source['chunk_id']}
+                        ** Page: ** {source['page']}
 
-    **Distance:** {source['distance']:.4f}
-    """
+                        > {snippet}...
+                        """
                     )
 
                     st.divider()
