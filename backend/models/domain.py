@@ -32,6 +32,7 @@ class RetrievedChunk:
     total_pages: int
     chunk_id: int
     distance: float
+    rrf_score: float = 0.0
 
 @dataclass
 class RetrievalResult:

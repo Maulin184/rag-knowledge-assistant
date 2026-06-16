@@ -8,6 +8,8 @@ from backend.core.vector_store import VectorStoreManager
 
 from backend.services.document_manager import DocumentManager
 from backend.services.retrieval_service import RetrievalService
+from backend.services.bm25_retrieval_service import BM25RetrievalService
+from backend.services.hybrid_retrieval_service import HybridRetrievalService
 from backend.services.llm_service import LLMService
 from backend.services.rag_pipeline import RAGPipeline
 from backend.services.conversation_manager import (
@@ -29,6 +31,15 @@ retrieval_service = RetrievalService(
     vector_store=vector_store
 )
 
+bm25_retriever = BM25RetrievalService(
+    vector_store=vector_store
+)
+
+hybrid_retrieval_service = HybridRetrievalService(
+    semantic_retriever=retrieval_service,
+    bm25_retriever=bm25_retriever
+)
+
 load_dotenv()
 
 api_key = os.getenv("GROQ_API_KEY")
@@ -48,6 +59,6 @@ pipeline = RAGPipeline(
     chunker=chunker,
     embedder=embedder,
     vector_store=vector_store,
-    retrieval_service=retrieval_service,
+    retrieval_service=hybrid_retrieval_service,
     llm_service=llm_service
 )

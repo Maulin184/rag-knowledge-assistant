@@ -1,0 +1,42 @@
+[
+  {
+    "question": "What is machine learning, and how is a computer program formally defined as learning from experience?",
+    "expected_pages": [1]
+  },
+  {
+    "question": "What are the four basic components of the learning process in machine learning?",
+    "expected_pages": [2]
+  },
+  {
+    "question": "What are logical models in machine learning, and how do they relate to concept learning?",
+    "expected_pages": [3]
+  },
+  {
+    "question": "What are geometric models, and what is the difference between linear models and distance-based models?",
+    "expected_pages": [4, 5, 6]
+  },
+  {
+    "question": "How do probabilistic models classify new entities, and what role does conditional probability play in Naive Bayes?",
+    "expected_pages": [6, 7]
+  },
+  {
+    "question": "What are the key design choices involved in designing a machine learning system?",
+    "expected_pages": [8]
+  },
+  {
+    "question": "What is supervised learning, and how does it differ from unsupervised and reinforcement learning?",
+    "expected_pages": [12, 13, 14]
+  },
+  {
+    "question": "What is a version space, and how are complete and consistent concepts defined?",
+    "expected_pages": [15]
+  },
+  {
+    "question": "What is PAC learning, and what does it mean for a concept class to be PAC-learnable?",
+    "expected_pages": [20, 21]
+  },
+  {
+    "question": "What is the Vapnik–Chervonenkis (VC) dimension, and how is it related to the concept of shattering?",
+    "expected_pages": [21, 22, 23]
+  }
+]
