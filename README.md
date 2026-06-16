@@ -97,6 +97,17 @@ The objective was not simply to build a chatbot, but to engineer a maintainable 
 * Service-oriented backend structure
 
 ---
+## Application Demo
+
+### Dashboard
+![Dashboard]<img width="1366" height="768" alt="Dashboard" src="https://github.com/user-attachments/assets/856e4ff6-ba2a-4f66-9400-3fa977dd3c3b" />
+
+### Question Answering
+![Question Answering]<img width="1366" height="768" alt="question_answering_2" src="https://github.com/user-attachments/assets/4790ad07-97e4-4578-9f49-5512a67c9e47" />
+
+### Source Citations
+![Source Citations]<img width="1366" height="768" alt="sources" src="https://github.com/user-attachments/assets/82cc9243-bd00-45a1-b555-6833b7c0b414" />
+
 
 ## System Architecture
 
